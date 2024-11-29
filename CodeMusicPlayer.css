@@ -1,0 +1,235 @@
+:root {
+    --primary-color: #084e0c;
+    --text-color: #1B5E20 ; 
+    --background-color:  #E8F5E9 ; 
+    --select-item: #FFFFFF;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+html {
+    font-family: "Poppins", sans-serif; 
+    /* height: 1200px;  */ 
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-color: #f0f0f0; */
+    height: 800px; 
+    background-color: var(--background-color);
+
+}
+
+.player {
+    width: 90%;
+    max-width: 500px;
+    /* background-color: #fff; */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    color: #333;
+}
+
+.dashboard {
+    text-align: center;
+    margin-bottom: 20px; 
+    /* height: 300px; */
+}
+
+.cd-thumb {
+    background-image: url('https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto; 
+}
+
+.control-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.control-buttons button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.control-buttons button:hover {
+    color: #007BFF;
+} 
+
+.control-repeat.active{
+    color: #ff5722; 
+} 
+
+.control-random.active{
+    color: #ff5722;
+}
+
+
+.progress {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.playlist {
+    max-height: 300px; /* Set the desired height for the playlist */
+    overflow-y: auto;
+    scrollbar-width: thin; 
+    scrollbar-color: #ccc transparent;  
+    display: grid; 
+    margin-top: 20px; 
+    padding-top: 10px;
+} 
+
+
+
+
+
+
+.song {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}  
+
+
+
+.song.active{ 
+    background-color: var(--primary-color);  
+    color: #fff;
+}   
+
+.song.active:active{ 
+    background-color: var(--background-color); 
+    color: #fff; 
+    cursor: none; 
+}
+
+.song:hover{ 
+    background-color: #f5f5f5;  /* Change background color on hover */
+    cursor: pointer;  /* Change cursor on hover */
+}
+
+.song:active{ 
+    opacity: 0.8; 
+    cursor: pointer;
+}
+
+
+
+.song.active .body-title, .song.active .body-author{ 
+    color: #fff;
+}
+
+.song:last-child {
+    border-bottom: none;
+} 
+
+.search {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#searchInput {
+    width: 90%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    border-radius: 15px; 
+    transition: border-color 0.2s;
+} 
+
+.search-container{ 
+     position: relative;
+     margin: 5px auto;
+
+}
+
+
+#searchInput:focus {
+    border-color: #007BFF;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2);
+} 
+
+
+
+.suggestion-list{ 
+    position: absolute;
+    top: 100%;
+    left: 0; 
+    width: 100%;   
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    z-index: 1; 
+}    
+
+
+
+.playlist-cd {
+    background-image: url('https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.body {
+    flex: 1;
+}
+
+.body-title {
+    font-size: 1rem;
+    color: #333;
+}
+
+.body-author,
+.body-album,
+.body-duration {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.option {
+    font-size: 1.2rem;
+    color: #333;
+    cursor: pointer;
+}

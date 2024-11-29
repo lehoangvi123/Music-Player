@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="./CodeMusicPlayer.css">
+    <link rel="stylesheet" href="./BuildTabUI.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="./Img/CatholicIcon.jpg">
+</head>
+<body>
+    <div class="player">
+        <div class="header">
+            <p class="header-p">Now Playing:</p>
+            <h2 class="header-h2">String 57th & 9th</h2>
+        </div>
+
+        <div class="dashboard">
+            <div class="cd">
+                <div class="cd-thumb" style="background-image: url('');"></div>
+            </div>
+
+            <div class="control">
+                <div class="control-buttons">
+                    <button class="control-repeat"><i class="fas fa-redo"></i></button>
+                    <button class="control-previous"><i class="fas fa-step-backward"></i></button>
+                    <button class="control-toggle-play"><i class="fas fa-play"></i></button>
+                    <button class="control-next"><i class="fas fa-step-forward"></i></button>
+                    <button class="control-random"><i class="fas fa-random"></i></button>
+                </div>
+
+                <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
+                <audio id="audio" src="" class="audio"></audio> 
+
+            </div> 
+            <div class="search-container">
+                <input id="searchInput" class="search-input" type="text" placeholder="Search for a song..." />
+                <ul id="suggestion-list" class="SuggestionList">
+                    <!-- <li></li> -->
+                </ul>
+            </div>
+        </div> 
+
+        <!-- Search Input -->
+   
+
+        <div class="playlist">
+            <!-- Repeat for more songs -->
+        </div>
+    </div>
+
+    <script src="./CodeMusicPlayer.js"></script>
+</body>
+</html>
