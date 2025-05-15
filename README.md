@@ -1,5 +1,8 @@
 # Music Application, How to enjoy! 
 
+Programming Language: HTML, CSS, Javascript, Bootstrap 
+IDE: Visual Studio Code
+
 Some picture to review the website, if you want to enjoy my website, just click the website in the link I inser: 
 
 ![image](https://github.com/user-attachments/assets/604cf6ab-c431-4e63-8e9b-e780e5b54807) 
